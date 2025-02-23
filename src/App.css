@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+.LogoText{
+    font-family: "Lexend Deca", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.Typewritter_Text{
+    max-width: max-content;
+    font-size: 3rem;
+    line-height: 1;
+}
+.Typewritter_Cursor{
+    font-size: 3rem;
+}
