@@ -25,11 +25,9 @@ body {
   height: 100%;
 } */
 
-
-
-@layer base {}
-
-
+:root{
+  cursor: url("/src/assets/Logo.svg"), auto;
+}
 
 @layer base {
   * {
