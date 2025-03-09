@@ -1,14 +1,16 @@
-import React, { useEffect, Suspense } from "react";
+import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { useGLTF, useAnimations, OrbitControls, Sky } from "@react-three/drei";
+import { useGLTF, useAnimations, OrbitControls, Center } from "@react-three/drei";
+import { EffectComposer, Bloom } from "@react-three/postprocessing";
 
 function AnimatedModel() {
     const { scene, animations } = useGLTF("/assets/model.glb");
     const { actions } = useAnimations(animations, scene);
 
-    useEffect(() => {
+    React.useEffect(() => {
         if (actions) {
-            actions[Object.keys(actions)[0]]?.play(); // Play the first animation
+            const firstAction = actions[Object.keys(actions)[0]];
+            firstAction?.play();
         }
     }, [actions]);
 
@@ -18,28 +20,38 @@ function AnimatedModel() {
 export default function MyModel() {
     return (
         <Canvas
-            camera={{ position: [0, 2, 5], fov: 50 }}
-            style={{ width: "25vw", height: "50vh", borderRadius: "1rem" }}
+            camera={{
+                position: [1, 0, 2.5], // Adjusted for a better overview of the model.
+                fov: 50
+            }}
+            style={{
+                width: "25vw",
+                height: "60vh"
+            }}
         >
+
             {/* Lighting */}
             <ambientLight intensity={0.5} />
             <directionalLight position={[5, 5, 5]} intensity={1} />
 
+            {/* Controls */}
+            <OrbitControls enablePan={false} enableZoom={false} target={[0, 0, 0]} />
+
             {/* Model */}
             <Suspense fallback={null}>
-                {/* Sky */}
-                <Sky
-                    distance={450000}
-                    sunPosition={[0, 1, 0]}
-                    inclination={0}
-                    azimuth={0.25}
-                />
-
-                {/* Model */}
-                <AnimatedModel />
-                <OrbitControls enablePan={false} enableZoom={false} />
+                <Center>
+                    <AnimatedModel />
+                </Center>
             </Suspense>
 
+            {/* Postprocessing with Bloom for a glow effect */}
+            <EffectComposer>
+                <Bloom
+                    luminanceThreshold={0}       // lower threshold to include more of the scene
+                    luminanceSmoothing={0.4}       // how gradually the bloom effect falls off
+                    intensity={3}              // overall strength of the bloom effect
+                />
+            </EffectComposer>
         </Canvas>
     );
 }

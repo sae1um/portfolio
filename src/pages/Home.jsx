@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import MainHero from '../components/sections/MainHero'
 import TypewriterComponent from 'typewriter-effect'
 import "../App.css"
-import SelfiePicture from  "../assets/20240810_155050.jpg"
 import MyModel from '../components/model'
 
 function Home() {
@@ -22,8 +21,7 @@ function Home() {
           </div>
           <p className='text-3xl opacity-85'>Full Stack Developer</p>
         </div>
-        {/* <img className='h-auto max-w-md rounded-full' src={SelfiePicture} /> */}
-        <div className='bg-white/10 rounde-ful'>
+        <div className=''>
           <MyModel />
         </div>
       </div>
