@@ -8,7 +8,7 @@ function App({children}) {
     <div className="min-h-screen min-w-full bg-black text-white overflow-hidden relative z-0 flex flex-col">
       <SpaceBackground />
       <Navbar/>
-      {/* <CustomCursor /> */}
+      <CustomCursor />
       <div className="relative z-10 w-full overflow-hidden mt-40">
         <Outlet />
       </div>

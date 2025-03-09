@@ -112,7 +112,9 @@ export default function Navbar() {
                   <div className="flex flex-row items-center gap-4">
                     Send email?
                     <a href="mailto:godswillerh@gmail.com">
-                      <BsSend />
+                      <button className="hover:text-sky-400 outline-none">
+                        <BsSend />
+                      </button>
                     </a>
                   </div>
                 </motion.div>
