@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import MainHero from '../components/sections/MainHero'
 import TypewriterComponent from 'typewriter-effect'
 import "../App.css"
 import MyModel from '../components/model'
+import ProjectsSection from '../components/sections/Projects'
 
 function Home() {
   return (
@@ -25,7 +25,6 @@ function Home() {
           <MyModel />
         </div>
       </div>
-      <MainHero />
     </div>
   )
 }

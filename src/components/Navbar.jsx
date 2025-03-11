@@ -39,7 +39,7 @@ export default function Navbar() {
             to="/"
             className="flex items-center transition duration-200 hover:text-slate-300 gap-2"
           >
-            <span className="LogoText text-3xl bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+            <span className="LogoText text-3xl bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">
               Godswill
               <br className="" />
               Erhunmwunse
