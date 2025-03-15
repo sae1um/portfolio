@@ -12,7 +12,7 @@ export default function About() {
                 <Stars className="h-full w-full opacity-[0.04]" />
             </div>
 
-            <div className="container relative z-10 mx-auto px-4">
+            <div className="containerrelative z-10 mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -20,9 +20,10 @@ export default function About() {
                     className="mb-16 text-center"
                 >
                     <h2 className="mb-4 text-4xl font-bold tracking-tight text-white">About Me</h2>
-                    <p className="mx-auto max-w-2xl text-lg text-gray-400">
-                        I'm a passionate Full Stack Developer with a love for creating elegant solutions to complex problems. My
-                        journey in tech has equipped me with a diverse skill set and a keen eye for detail.
+                    <p className="mx-auto max-w-3xl text-lg text-gray-400">
+                    I'm a software developer interested in <span className="Semi-bold text-slate-400">internet technologies, software engineering, and full-stack development. </span>
+                    I build efficient, scalable software that enhances user experiences. With a practical, detail-oriented approach, 
+                    I focus on creating real-world solutions that are both <span className="Semi-bold text-slate-400">functional and maintainable.</span>
                     </p>
                 </motion.div>
 
@@ -54,8 +55,8 @@ export default function About() {
                     className="mx-auto mt-16 max-w-2xl text-center"
                 >
                     <p className="text-lg text-gray-400">
-                        Currently, I'm focused on building accessible, human-centered products that make a real difference. I
-                        believe in continuous learning and staying up-to-date with the latest technologies and best practices.
+                    I'm gaining hands-on experience through industry projects, focusing on full-stack development, AI/ML, and system architecture. 
+                    Long-term, I aim to work with leading tech companies, developing scalable solutions before creating my own digital products or startup, solving technical challenges, and optimising performance.
                     </p>
                 </motion.div>
             </div>

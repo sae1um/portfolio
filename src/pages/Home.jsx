@@ -15,7 +15,10 @@ export default function Home() {
         <MyModel />
       </div>
       <section id='about'>
-        <About/>
+        <About />
+      </section>
+      <section id='projects'>
+        <Projects />
       </section>
     </div>
   )

@@ -4,17 +4,17 @@ export const skills = [
     {
         icon: Globe,
         title: "Frontend Development",
-        desc: "Building responsive and interactive user interfaces with React, Next.js, and modern CSS",
+        desc: "Building responsive and interactive user interfaces with React, and modern CSS frameworks",
     },
     {
         icon: Server,
         title: "Backend Development",
-        desc: "Creating robust server-side applications using Node.js, Express, and various databases",
+        desc: "Creating server-side applications using Node.js, Express, and various databases technologies",
     },
     {
         icon: Database,
         title: "Database Management",
-        desc: "Designing and optimizing database schemas with MongoDB and PostgreSQL",
+        desc: "Designing and optimising database schemas with MongoDB, MySQL, and PostgreSQL",
     },
     {
         icon: Code2,
