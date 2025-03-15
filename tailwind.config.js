@@ -50,27 +50,6 @@ export default {
 					'4': 'hsl(var(--chart-4))',
 					'5': 'hsl(var(--chart-5))'
 				}
-			},
-			keyframes: {
-				typing: {
-					"0%": {
-						width: "0%"
-					},
-					"100%": {
-						width: "100%"
-					}
-				},
-				blink: {
-					"50%": {
-						borderColor: "transparent"
-					},
-					"100%": {
-						borderColor: "white"
-					}
-				}
-			},
-			animation: {
-				typing: "typing 10s steps(40) 1, blink .7s infinite"
 			}
 		},
 		plugins: [require("tailwindcss-animate")],

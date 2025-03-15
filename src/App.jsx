@@ -9,7 +9,7 @@ function App({children}) {
       <SpaceBackground />
       <Navbar/>
       <CustomCursor />
-      <div className="relative z-10 w-full overflow-hidden mt-40">
+      <div className="relative z-10 w-full overflow-hidden">
         <Outlet />
       </div>
     </div>

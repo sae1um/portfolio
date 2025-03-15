@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [expanded, setExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -18,12 +19,25 @@ const CustomCursor = () => {
       }
     };
 
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('resize', checkIsMobile);
+
+    // Initial check
+    checkIsMobile();
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize', checkIsMobile);
     };
   }, []);
+
+  if (isMobile) {
+    return null;
+  }
 
   const cursorStyle = {
     position: 'fixed',
@@ -36,8 +50,11 @@ const CustomCursor = () => {
     pointerEvents: 'none',
     // Use transform to both center the cursor and apply scaling based on "expanded" state
     transform: `translate(-50%, -50%) scale(${expanded ? 1.5 : 1}) `,
-    zIndex: 999999,
+    zIndex: 999999 ,
     transition: 'transform 0.2s ease-in-out',
+    mixBlendMode: "difference", // Helps visibility
+    cursor: `${isMobile ? 'auto' : 'none'}`,
+    
   };
 
   return <div style={cursorStyle} />;
