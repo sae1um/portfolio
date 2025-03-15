@@ -1,0 +1,7 @@
+Update mobile menu +porfolio @menu
+Create a contact form +porfolio @menu
+Design form layout +porfolio @menu
+Implement form validation +porfolio @menu
+Set up form submission +porfolio @menu
+Test form functionality +porfolio @menu
+List skills (technologies I learnt) +porfolio @contact
