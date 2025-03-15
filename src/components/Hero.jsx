@@ -7,7 +7,6 @@ export default function Hero() {
         <div
             className="relative flex items-center justify-center overflow-hidden"
         >
-
             <div className="container relative z-10 mx-auto px-4 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -102,30 +101,6 @@ export default function Hero() {
                         </motion.div>
                     </motion.a>
                 </motion.div>
-
-                {/* <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex justify-center gap-6"
-          >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="group relative overflow-hidden rounded-full border border-[#64B5F6] bg-transparent px-8 py-3 text-[#64B5F6] transition-all hover:text-white"
-            >
-              <span className="relative z-10">View Projects</span>
-              <span className="absolute bottom-0 left-0 h-0 w-full bg-[#64B5F6] transition-all duration-300 group-hover:h-full"></span>
-            </motion.button>
-  
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="rounded-full border border-gray-700 bg-transparent px-8 py-3 text-white transition-all hover:border-white"
-            >
-              Contact Me
-            </motion.button>
-          </motion.div> */}
             </div>
         </div>
     )
