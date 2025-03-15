@@ -1,0 +1,10 @@
+IDEAS
+- Custom Cursor
+- Some 3D obj?
+
+
+INSPIRATION
+https://m7mad.dev/
+https://arnavxdata.com/
+
+https://www.reddit.com/r/webdev/comments/143acrg/show_me_your_portfolios/?rdt=41781
