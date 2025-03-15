@@ -54,7 +54,7 @@ export default function MyModel() {
             <ambientLight intensity={0.5} />
             <directionalLight position={[5, 5, 5]} intensity={1} />
             <OrbitControls
-                enablePan={true}
+                enablePan={false}
                 enableZoom={false}
                 target={[0, 1, 0]}
                 maxPolarAngle={Math.PI / 2} // Restrict rotation to the x-axis
