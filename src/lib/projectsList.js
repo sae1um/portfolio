@@ -39,7 +39,7 @@ export const projects = [
     },
     {
         id: 4,
-        title: "Weather Dashboard",
+        title: "",
         description:
             "",
         technologies: ["TBD"],

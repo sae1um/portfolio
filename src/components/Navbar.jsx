@@ -47,7 +47,7 @@ export default function Navbar() {
             onClick={(e) => {
               e.preventDefault()
               document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })
-          }}
+            }}
             className="flex items-center transition duration-200 hover:text-slate-300 gap-2"
           >
             <span className="LogoText text-3xl bg-gradient-to-r from-sky-300 to-blue-300 bg-clip-text text-transparent hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] transition-all duration-600">
@@ -190,14 +190,19 @@ export default function Navbar() {
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 {/* Navigation Links */}
                 {[
-                  { name: "About", path: "#about" },
-                  { name: "Projects", path: "#projects" },
-                  { name: "Contact", path: "#contact" },
+                  { name: "About", path: "#about", id: "about" },
+                  { name: "Projects", path: "#projects", id: "projects" },
+                  { name: "Contact", path: "#contact", id: "contact" },
                 ].map((item) => (
                   <a
                     key={item.path}
                     href={item.path}
-                    onClick={toggleMenu}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
+                      toggleMenu();
+                    }}
+                    // onClick={toggleMenu}
                     className={`block px-3 py-2 rounded-md text-base font-medium ${location.pathname === item.path
                       ? "text-sky-400"
                       : "text-white hover:text-sky-400"
