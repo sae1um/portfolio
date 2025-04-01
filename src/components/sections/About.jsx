@@ -2,9 +2,8 @@ import { motion } from "framer-motion"
 import { Stars } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { skills } from "../../lib/skillsList"
-
+import TechnologiesOrbit from "../TechnologiesOrbit"
 export default function About() {
-    console.log(skills)
     return (
         <section className="relative min-h-screen w-fullpy-20">
             {/* Star background */}
@@ -27,7 +26,7 @@ export default function About() {
                     </p>
                 </motion.div>
 
-                <div className="grid gap-8 md:grid-cols-2">
+                <div className="grid gap-8 mb-4 md:grid-cols-2">
                     {skills.map((skill, index) => (
                         <motion.div
                             key={skill.title}
@@ -47,7 +46,17 @@ export default function About() {
                         </motion.div>
                     ))}
                 </div>
-
+                
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="my-8 text-center"
+                >
+                    <h3 className="mb-8 text-center text-2xl font-semibold text-slate-300">Technologies I Work With</h3>
+                    <TechnologiesOrbit />
+                </motion.div>
+                
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
