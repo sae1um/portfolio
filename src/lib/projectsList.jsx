@@ -1,5 +1,6 @@
 import floraFlowImg from "../assets/projectImages/floraflowImg.png"
 import ttkit from "../assets/projectImages/ttkit.png"
+import portfolioImg from "../assets/projectImages/portfolioImg.png"
 import { Linkedin } from 'lucide-react';
 
 export const projects = [
@@ -45,5 +46,15 @@ export const projects = [
         live: {disabled: true, url: ""},
         misc: {name: "LinkedIn Post", icon: Linkedin, link: "https://www.linkedin.com/feed/update/urn:li:activity:7320925292636594178/"},
         imageUrl: "https://media.licdn.com/dms/image/v2/D4D22AQF0gCja_2POfw/feedshare-shrink_2048_1536/B4DZZkmwVRGwAs-/0/1745444604187?e=1749686400&v=beta&t=lZedJ4JqFa4cY9GC1D2Ma1mRXLaenJ8PSuLaDUQoquQ",
+    },
+    {
+        id: 5,
+        title: "Portfolio Website",
+        description:
+            "This portfolio website showcases my projects, skills, and experiences. Built with React and Tailwind CSS, it serves as a platform to share my work and connect with others.",
+        technologies: ["React", "Tailwind CSS", "Framer Motion", "Three.js"],
+        github: {disabled: false, url: "https://github.com/sae1um/portfolio"},
+        live: {disabled: false, url: "#home"},
+        imageUrl: portfolioImg,
     }
 ]
