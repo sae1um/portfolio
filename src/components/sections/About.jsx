@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card"
 import { Rocket, MapPin, GraduationCap, Sparkles } from 'lucide-react';
 import pfpimg from "../../assets/projectImages/pfpimg.jpg"
 import { interests, currentWork } from "../../lib/interests";
+import Technologies from "../technologies"
 
 export default function About() {
     return (
@@ -118,8 +119,8 @@ export default function About() {
                     transition={{ duration: 0.6 }}
                     className="my-8 text-center"
                 >
-                    <h3 className="mb-8 text-center text-2xl font-semibold text-slate-300">Technologies I Work With</h3>
-
+                    <h3 className="mb-4 text-center text-2xl font-semibold text-slate-300">Technologies I Work With</h3>
+                    <Technologies />
                 </motion.div>
 
                 <motion.div
