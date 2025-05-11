@@ -41,9 +41,8 @@ export default function Navbar() {
       className="Text fixed w-full backdrop-blur-lg shadow-lg z-50">
       <div className="px-4 sm:px-10 lg:px-20">
         <div className="flex justify-between items-center py-5">
-          {/* Left: Name */}
           <a
-            href="#home"
+            href="/"
             onClick={(e) => {
               e.preventDefault()
               document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })
@@ -137,12 +136,12 @@ export default function Navbar() {
           <div className="hidden lg:flex lg:items-center">
             <ul className="flex gap-6 text-xl font-medium">
               {[
-                { name: "About", path: "#about", id: "about" },
+                { name: "About Me", path: "#about", id: "about" },
                 { name: "Projects", path: "#projects", id: "projects" },
-                { name: "Contact", path: "#contact", id: "contact" },
+                { name: "Contact", path: "/contact", id: "contact" },
               ].map((item) => (
                 <li key={item.path}>
-                  <a href={item.path}
+                  <Link to={item.path}
                     onClick={(e) => {
                       e.preventDefault()
                       document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" })
@@ -153,7 +152,7 @@ export default function Navbar() {
                       } after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-sky-300 after:transition-all after:duration-300`}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -75,7 +75,7 @@ export default function Navbar() {
       </div>
       <ul className="flex gap-6 text-xl font-medium pr-8">
         {[
-          { name: "About", path: "/about" },
+          { name: "About Me", path: "/about" },
           { name: "Projects", path: "/projects" },
           { name: "Contact", path: "/contact" }
         ].map((item) => (
