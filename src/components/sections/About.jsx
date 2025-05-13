@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import { Stars } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Rocket, MapPin, GraduationCap, Sparkles } from 'lucide-react';
-import pfpimg from "../../assets/projectImages/pfpimg.jpg"
+import pfpimg from "../../assets/projectImages/pfpImg.jpg"
 import { interests, currentWork } from "../../lib/interests";
 import Technologies from "../technologies"
 
