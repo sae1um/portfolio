@@ -21,7 +21,7 @@ const router = createBrowserRouter([
         Component: Home,
       },
       {
-        path: "/contact", 
+        path: "/contact",
         Component: Contact
       }
     ],

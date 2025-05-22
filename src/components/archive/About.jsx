@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import { Stars } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { skills } from "../../lib/skillsList"
-export default function About() {
+export default function AboutaArchive() {
     return (
         <section className="relative min-h-screen w-fullpy-20">
             {/* Star background */}

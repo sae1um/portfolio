@@ -7,10 +7,10 @@ function App({children}) {
   return (
     <div className="min-h-screen min-w-screen bg-black text-white overflow-hidden relative z-0 flex flex-col">
       <SpaceBackground />
-      <Navbar/>
+      <Navbar />
       <CustomCursor />
       <div className="relative z-10 w-full overflow-hidden">
-        <Outlet />
+        <Outlet scrollToId/>
       </div>
     </div>
   )

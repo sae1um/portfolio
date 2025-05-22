@@ -1,4 +1,3 @@
-import React from 'react'
 import "../App.css"
 import MyModel from '../components/model'
 
@@ -14,7 +13,7 @@ export default function Home() {
         <Hero />
         <MyModel />
       </section>
-      <section id='about' className='pt-32 '>
+      <section id='about' className='pt-32'>
         <About />
       </section>
       <section id='projects' className='pt-16 max-w-full'>

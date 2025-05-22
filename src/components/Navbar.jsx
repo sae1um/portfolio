@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaRegCopy } from "react-icons/fa6";
@@ -17,6 +17,7 @@ import "../App.css"
 
 export default function Navbar() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
   const [isOpen, setIsOpen] = useState(false); // State for mobile menu
 
@@ -41,11 +42,17 @@ export default function Navbar() {
       className="Text fixed w-full backdrop-blur-lg shadow-lg z-50">
       <div className="px-4 sm:px-10 lg:px-20">
         <div className="flex justify-between items-center py-5">
-          <a
-            href="/"
+          <Link
+            to={"/"}
             onClick={(e) => {
-              e.preventDefault()
-              document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })
+              e.preventDefault();
+              if (location.pathname !== "/") {
+                // If not on the home page, navigate to home
+                navigate("/");
+              }
+              setTimeout(() => {
+                document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })
+              }, 0); // Timeout to ensure the page has loaded
             }}
             className="flex items-center transition duration-200 hover:text-slate-300 gap-2"
           >
@@ -54,7 +61,7 @@ export default function Navbar() {
               <br className="" />
               Erhunmwunse
             </span>
-          </a>
+          </Link>
 
           {/* Center: Social Media Icons (Hidden on Mobile) */}
           <div className="hidden lg:flex lg:flex-row lg:gap-6 text-3xl">
@@ -136,15 +143,24 @@ export default function Navbar() {
           <div className="hidden lg:flex lg:items-center">
             <ul className="flex gap-6 text-xl font-medium">
               {[
-                { name: "About Me", path: "#about", id: "about" },
-                { name: "Projects", path: "#projects", id: "projects" },
-                { name: "Contact", path: "/contact", id: "contact" },
+                { name: "About Me", path: "about", id: "about" },
+                { name: "Projects", path: "projects", id: "projects" },
+                { name: "Contact", path: "/contact", id: "contact" }
               ].map((item) => (
                 <li key={item.path}>
                   <Link to={item.path}
                     onClick={(e) => {
-                      e.preventDefault()
-                      document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" })
+                      e.preventDefault();
+
+                      if ((item.id === "about" || item.id === "projects")) {
+                        // Navigate to `/` and pass the target section
+                        navigate("/");
+                        setTimeout(() => {
+                          document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
+                        }, 0); // Timeout to ensure the page has loaded
+                      } else if (item.path === "/contact") {
+                        navigate("/contact");
+                      }
                     }}
                     className={`transition duration-300 hover:text-slate-300 relative ${location.pathname === item.path
                       ? "text-sky-400 after:w-full"
@@ -189,26 +205,31 @@ export default function Navbar() {
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 {/* Navigation Links */}
                 {[
-                  { name: "About", path: "#about", id: "about" },
-                  { name: "Projects", path: "#projects", id: "projects" },
-                  { name: "Contact", path: "#contact", id: "contact" },
+                  { name: "About Me", path: "about", id: "about" },
+                  { name: "Projects", path: "projects", id: "projects" },
+                  { name: "Contact", path: "/contact", id: "contact" }
                 ].map((item) => (
-                  <a
-                    key={item.path}
-                    href={item.path}
+                  <Link to={item.path}
                     onClick={(e) => {
                       e.preventDefault();
-                      document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
-                      toggleMenu();
+
+                      if ((item.id === "about" || item.id === "projects")) {
+                        // Navigate to `/` and pass the target section
+                        navigate("/");
+                        setTimeout(() => {
+                          document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
+                        }, 0); // Timeout to ensure the page has loaded
+                      } else if (item.path === "/contact") {
+                        navigate("/contact");
+                      }
                     }}
                     // onClick={toggleMenu}
                     className={`block px-3 py-2 rounded-md text-base font-medium ${location.pathname === item.path
                       ? "text-sky-400"
                       : "text-white hover:text-sky-400"
-                      }`}
-                  >
+                      }`}>
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
                 {/* Social Media Icons */}
                 <div className="flex items-center justify-center space-x-6 pt-4 text-2xl">
