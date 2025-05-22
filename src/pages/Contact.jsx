@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card } from "@/components/ui/card"
-
+import { Link } from "react-router-dom"
 export default function Contact() {
   const [formState, setFormState] = useState({
     name: "",

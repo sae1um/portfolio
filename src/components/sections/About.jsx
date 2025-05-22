@@ -8,7 +8,7 @@ import Technologies from "../Technologies"
 
 export default function About() {
     return (
-        <section className="relative min-h-screen w-fullpy-20">
+        <section className="relative min-h-screen">
             {/* Star background */}
             <div className="absolute inset-0 overflow-hidden">
                 <Stars className="h-full w-full opacity-[0.04]" />
@@ -24,90 +24,104 @@ export default function About() {
                     <h2 className="mb-4 text-4xl font-bold tracking-tight text-white">About Me</h2>
                 </motion.div>
 
-                <div className="grid gap-8 mb-4 md:grid-cols-12">
+                <div className="grid gap-6 md:grid-cols-12 md:gap-8">
+                    {/* Profile Card - Full width on mobile, 5 columns on desktop */}
                     <motion.div
-                        className="col-span-5 flex self-center items-center justify-center"
-                        // variants={item}
+                        className="self-center md:col-span-5"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <Card className="flex flex-col gap-2 group relative overflow-hidden border-gray-800 bg-black/50 p-6 backdrop-blur-sm transition-all">
-                            <div className="mb-4 flex items-center gap-5">
-                                <div class="relative h-20 w-20 overflow-hidden rounded-full border-2 border-[#64B5F6]">
-                                    <div class="flex h-full w-full items-center justify-center text-3xl">
-                                        <img src={pfpimg} alt="Profile" className="object-cover rounded-full" />
+                        <Card className="flex flex-col gap-2 border-gray-800 bg-black/50 p-4 backdrop-blur-sm transition-all md:p-6">
+                            <div className="mb-4 flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-5">
+                                <div className="relative h-16 w-16 overflow-hidden rounded-full border-2 border-[#64B5F6] sm:h-20 sm:w-20">
+                                    <div className="flex h-full w-full items-center justify-center text-3xl">
+                                        <img src={pfpimg} alt="Profile" className="h-full w-full object-cover" />
                                     </div>
                                 </div>
-                                <div>
-                                    <h2 className="text-2xl font-bold text-white">Hey, I'm Godswill 👋</h2>
-                                    <p className="text-lg text-gray-400">Full-Stack Developer</p>
+                                <div className="flex justify-center flex-col text-center sm:text-left">
+                                    <h2 className="text-xl font-bold text-white sm:text-2xl">Hey, I'm Godswill 👋</h2>
+                                    <p className="text-base text-gray-400 sm:text-lg">Full-Stack Developer</p>
                                 </div>
                             </div>
                             <div className="flex flex-col gap-2 mb-4">
-                                <div className="flex flex-row items-center gap-4">
-                                    <MapPin className="h-5 w-5 text-[#64B5F6]" />
-                                    <span className="text-gray-200">Based in Sheffield, England</span>
+                                <div className="flex flex-row items-center gap-3">
+                                    <MapPin className="h-4 w-4 text-[#64B5F6] sm:h-5 sm:w-5" />
+                                    <span className="text-sm text-gray-200 sm:text-base">Based in Sheffield, England</span>
                                 </div>
-                                <div className="flex flex-row items-center gap-4">
-                                    <GraduationCap className="h-5 w-5 text-[#64B5F6]" />
-                                    <span className="text-gray-200">Studying Computer Science, Maths and IT @ <a href="https://www.utcsheffield.org.uk/olp/" target="_blank" className="underline font-semibold">UTC Sheffield OLP</a></span>
+                                <div className="flex flex-row items-center gap-3">
+                                    <GraduationCap className="h-4 w-4 text-[#64B5F6] sm:h-5 sm:w-5" />
+                                    <span className="text-sm text-gray-200 sm:text-base">
+                                        Studying Computer Science, Maths and IT @{" "}
+                                        <a
+                                            href="https://www.utcsheffield.org.uk/olp/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="underline font-semibold"
+                                        >
+                                            UTC Sheffield OLP
+                                        </a>
+                                    </span>
                                 </div>
                             </div>
-                            <div className="flex flex-col items-center gap-4">
-                                <p>I'm a curious developer who loves turning ideas into reality through code. When I'm not building websites or tinkering with hardware, you'll find me exploring listening to podcasts or gaming.</p>
-                                <p>My journey started with simple HTML websites, but I quickly fell down the rabbit hole of what's possible with modern web technologies. Now I'm all about creating experiences that are both functional and delightful to use.</p>
+                            <div className="flex flex-col gap-3 text-sm text-gray-300 sm:text-base">
+                                <p>
+                                    I'm a curious developer who loves turning ideas into reality through code. When I'm not building
+                                    websites or tinkering with hardware, you'll find me exploring listening to podcasts or gaming.
+                                </p>
+                                <p>
+                                    My journey started with simple HTML websites, but I quickly fell down the rabbit hole of what's
+                                    possible with modern web technologies. Now I'm all about creating experiences that are both functional
+                                    and delightful to use.
+                                </p>
                             </div>
                         </Card>
                     </motion.div>
-                    <div className="col-span-7 flex flex-col gap-4">
-                        <motion.div
-                            class
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            <Card className="group relative overflow-hidden border-gray-800 bg-black/50 p-6 backdrop-blur-sm transition-all">
-                                <h3 className="mb-4 flex items-center justify-center gap-4 text-xl font-semibold text-white">
-                                    <Sparkles className="h-5 w-5 text-[#64B5F6]" />
+
+                    {/* Right Column - Interests and Current Work */}
+                    <div className="flex flex-col gap-6 md:col-span-7">
+                        {/* Interests Section */}
+                        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+                            <Card className="border-gray-800 bg-black/50 p-4 backdrop-blur-sm transition-all md:p-6">
+                                <h3 className="mb-4 flex items-center justify-center gap-2 text-lg font-semibold text-white sm:text-xl">
+                                    <Sparkles className="h-4 w-4 text-[#64B5F6] sm:h-5 sm:w-5" />
                                     What I'm Into
                                 </h3>
-                                <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+                                <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3">
                                     {interests.map((interest) => (
                                         <motion.div
                                             key={interest.label}
-                                            // variants={item}
-                                            className="flex flex-col items-center justify-center rounded-xl border border-gray-800 bg-black/30 p-4 text-center transition-all duration-300 hover:border-[#64B5F6] hover:bg-black/50"
+                                            className="flex flex-col items-center justify-center rounded-xl border border-gray-800 bg-black/30 p-3 text-center transition-all duration-300 hover:border-[#64B5F6] hover:bg-black/50 sm:p-4"
                                         >
-                                            <div className="mb-2 text-2xl">{interest.emoji}</div>
-                                            <div className="text-sm font-medium text-gray-300">{interest.label}</div>
+                                            <div className="mb-1 text-xl sm:mb-2 sm:text-2xl">{interest.emoji}</div>
+                                            <div className="text-xs font-medium text-gray-300 sm:text-sm">{interest.label}</div>
                                         </motion.div>
                                     ))}
                                 </div>
                             </Card>
                         </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            <Card className="grid grid-cols-3 gap-2 group relative overflow-hidden border-gray-800 bg-black/50 p-6 backdrop-blur-sm transition-all">
-                                <h3 className="mb-4 flex items-center gap-2 text-xl font-semibold text-white">
-                                    <Rocket className="h-5 w-5 text-[#64B5F6]" />
+
+                        {/* Current Work Section */}
+                        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+                            <Card className="border-gray-800 bg-black/50 p-4 backdrop-blur-sm transition-all md:p-6">
+                                <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-white sm:text-xl">
+                                    <Rocket className="h-4 w-4 text-[#64B5F6] sm:h-5 sm:w-5" />
                                     What I'm Working On
                                 </h3>
-                                {currentWork.map((work) => (
-                                    <motion.div
-                                        key={work.name}
-                                        className="rounded-xl border border-gray-800 bg-black/30 p-4 transition-all duration-300 hover:border-[#64B5F6] hover:bg-black/50"
-                                    >
-                                        <div className="mb-2 flex items-center gap-3">
-                                            <div className="text-2xl">{work.emoji}</div>
-                                            <h4 className="text-lg font-medium text-white">{work.name}</h4>
-                                        </div>
-                                        <p className="text-gray-400">{work.description}</p>
-                                    </motion.div>
-                                ))}
+                                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                                    {currentWork.map((work) => (
+                                        <motion.div
+                                            key={work.name}
+                                            className="rounded-xl border border-gray-800 bg-black/30 p-3 transition-all duration-300 hover:border-[#64B5F6] hover:bg-black/50 sm:p-4"
+                                        >
+                                            <div className="mb-2 flex items-center gap-2 sm:gap-3">
+                                                <div className="text-xl sm:text-2xl">{work.emoji}</div>
+                                                <h4 className="text-base font-medium text-white sm:text-lg">{work.name}</h4>
+                                            </div>
+                                            <p className="text-xs text-gray-400 sm:text-sm">{work.description}</p>
+                                        </motion.div>
+                                    ))}
+                                </div>
                             </Card>
                         </motion.div>
                     </div>
