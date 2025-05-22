@@ -9,7 +9,8 @@ import {
 
 import Home from './pages/Home.jsx';
 import Contact from './pages/Contact.jsx';
-import NotFound from './pages/NotFound.jsx';
+import ErrorElement from './pages/ErrorElement.jsx';
+import Test from './components/Test.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,9 +24,13 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         Component: Contact
+      },
+      {
+        path: "/test",
+        Component: Test
       }
     ],
-    errorElement: <NotFound />,
+    errorElement: <ErrorElement />,
   }
 ])
 createRoot(document.getElementById('root')).render(

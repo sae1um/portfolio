@@ -5,6 +5,7 @@ import MyModel from '../components/model'
 import Hero from '../components/Hero'
 import About from '../components/sections/About'
 import Projects from '../components/sections/Projects'
+import AboutTest from "../components/Test"
 
 export default function Home() {
   return (
