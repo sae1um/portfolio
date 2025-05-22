@@ -10,6 +10,7 @@ import {
     Cloud,
     ChevronLeft,
     ChevronRight,
+    FileCode2 
 } from "lucide-react";
 import { technologiesByCategory } from "../lib/technologies";
 import { directPointLight } from "three/tsl";
@@ -23,6 +24,7 @@ export default function Technologies() {
     const categories = [
         { id: "all", name: "All", icon: Layers },
         { id: "frontend", name: "Frontend", icon: Code },
+        { id: "languages", name: "Languages", icon: FileCode2 },
         { id: "backend", name: "Backend", icon: Server },
         { id: "database", name: "Database", icon: Database },
         { id: "design", name: "Design", icon: Palette },
@@ -162,7 +164,9 @@ export default function Technologies() {
                                 className="group flex flex-col items-center"
                             >
                                 <div className="mb-3 flex h-20 w-20 items-center justify-center rounded-xl border border-gray-800 bg-black/30 p-2 transition-all duration-300 group-hover:border-[#64B5F6] group-hover:shadow-glow">
-                                    <tech.icon className="w-20 h-10" />
+                                    {tech.icon && (
+                                        <tech.icon className={`w-20 h-10`} style={{ color: tech.colour }} />
+                                    )}
                                 </div>
                                 <span className="text-center text-sm font-medium text-gray-300 transition-colors duration-300 group-hover:text-white">
                                     {tech.name}

@@ -22,6 +22,8 @@ import {
     SiGithub,
     SiPostman,
 } from "react-icons/si";
+import { TbBrandOffice } from "react-icons/tb";
+
 import { TbBrandCSharp } from "react-icons/tb";
 import { AiOutlineApi } from "react-icons/ai";
 import { VscAzure,VscVscode } from "react-icons/vsc";
@@ -44,42 +46,49 @@ export const technologies = [
 
 export const technologiesByCategory = {
     frontend: [
-        { name: "JavaScript", color: "#F7DF1E", icon: SiJavascript },
-        { name: "TypeScript", color: "#3178C6", icon: SiTypescript },
-        { name: "React", color: "#61DAFB", icon: SiReact },
-        { name: "Next.js", color: "#000000", icon: SiNextdotjs },
-        { name: "HTML", color: "#E34F26", icon: SiHtml5 },
-        { name: "CSS", color: "#1572B6", icon: SiCss3 },
-        { name: "Tailwind CSS", color: "#38B2AC", icon: SiTailwindcss },
+        { name: "JavaScript", colour: "#F7DF1E", icon: SiJavascript },
+        { name: "TypeScript", colour: "#3178C6", icon: SiTypescript },
+        { name: "React", colour: "#61DAFB", icon: SiReact },
+        { name: "Next.js", colour: "#FFFFF", icon: SiNextdotjs },
+        { name: "HTML", colour: "#E34F26", icon: SiHtml5 },
+        { name: "CSS", colour: "#1572B6", icon: SiCss3 },
+        { name: "Tailwind CSS", colour: "#38B2AC", icon: SiTailwindcss },
     ],
     backend: [
-        { name: "Node.js", color: "#339933", icon: SiNodedotjs },
-        { name: "Express", color: "#000000", icon: SiExpress },
-        { name: "Python", color: "#3776AB", icon: SiPython },
-        { name: "C#", color: "#5632d4", icon: TbBrandCSharp },
-        { name: "REST", color: "#FF6C37", icon: AiOutlineApi }, // No specific icon available
+        { name: "Node.js", colour: "#339933", icon: SiNodedotjs },
+        { name: "Express", colour: "#FFFFF", icon: SiExpress },
+        { name: "Python", colour: "#3776AB", icon: SiPython },
+        { name: "C#", colour: "#5632d4", icon: TbBrandCSharp },
+        { name: "REST", colour: "#FF6C37", icon: AiOutlineApi }, 
     ],
     database: [
-        { name: "MongoDB", color: "#47A248", icon: SiMongodb },
-        { name: "MySQL", color: "#4479A1", icon: SiMysql },
-        { name: "PostgreSQL", color: "#336791", icon: SiPostgresql },
+        { name: "MongoDB", colour: "#47A248", icon: SiMongodb },
+        { name: "MySQL", colour: "#4479A1", icon: SiMysql },
+        { name: "PostgreSQL", colour: "#336791", icon: SiPostgresql },
     ],
     design: [
-        { name: "Figma", color: "#F24E1E", icon: SiFigma },
-        { name: "Photoshop", color: "#31A8FF", icon: SiAdobephotoshop },
+        { name: "Figma", colour: "#a55eff", icon: SiFigma },
+        { name: "Photoshop", colour: "#31A8FF", icon: SiAdobephotoshop },
     ],
     services: [
-        { name: "AWS", color: "#FF9900", icon: FaAws },
-        { name: "Azure", color: "#0078D4", icon: VscAzure },
-        { name: "Netlify", color: "#00C7B7", icon: SiNetlify },
-        { name: "Vercel", color: "#000000", icon: SiVercel },
-        { name: "Render", color: "#46E3B7", icon: SiRender },
-        { name: "Postman", color: "#FF6C37", icon: SiPostman }, // No specific icon available
+        { name: "AWS", colour: "#FF9900", icon: FaAws },
+        { name: "Azure", colour: "#0078D4", icon: VscAzure },
+        { name: "Netlify", colour: "#00C7B7", icon: SiNetlify },
+        { name: "Vercel", colour: "#FFFFF", icon: SiVercel },
+        { name: "Render", colour: "#46E3B7", icon: SiRender },
+        { name: "Postman", colour: "#FF6C37", icon: SiPostman }, 
     ],
     tools: [
-        { name: "Git", color: "#F05032", icon: SiGit },
-        { name: "GitHub", color: "#181717", icon: SiGithub },
-        { name: "VS Code", color: "#007ACC", icon: VscVscode },
-        { name: "Arduino", color: "#00979D", icon: SiArduino },
+        { name: "Git", colour: "#F05032", icon: SiGit },
+        { name: "GitHub", colour: "#474545", icon: SiGithub },
+        { name: "VS Code", colour: "#007ACC", icon: VscVscode },
+        { name: "Arduino", colour: "#00979D", icon: SiArduino },
+        { name: "MS Office", colour: "#e43a00", icon: TbBrandOffice },
     ],
+    languages: [
+        { name: "JavaScript", colour: "#F7DF1E", icon: SiJavascript },
+        { name: "TypeScript", colour: "#3178C6", icon: SiTypescript },
+        { name: "Python", colour: "#3776AB", icon: SiPython },
+        { name: "C#", colour: "#5632d4", icon: TbBrandCSharp },
+    ]
 };
