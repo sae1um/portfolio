@@ -37,7 +37,7 @@ export default function Projects() {
 
 function ProjectCard({ project, index }) {
     const [isHovered, setIsHovered] = useState(false);
-
+    const MiscIcon = project.misc ? project.misc.icon : null;
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -91,29 +91,44 @@ function ProjectCard({ project, index }) {
                             variant="outline"
                             size="sm"
                             className="flex items-center gap-2 border-gray-700 bg-black/30 text-white hover:border-[#64B5F6] hover:bg-black/50 hover:text-[#64B5F6]"
-                            disabled={project.disabled}
-                            asChild
+                            disabled={project.github.disabled}
                         >
-                            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                            <a href={project.github.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                                 <Github className="h-4 w-4" />
                                 <span>Code</span>
-                            </a>
+                            </a> 
                         </Button>
                         <Button 
                             className="flex items-center flex-row gap-2 bg-[#64B5F6] text-black hover:bg-[#81D4FA]" 
-                            size="sm" 
-                            asChild
+                            size="sm"
+                            disabled={project.live.disabled}
                         >
-                            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                            <a href={project.live.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                                 <ExternalLink className="h-4 w-4" />
                                 <span>Live Demo</span>
                             </a>
                         </Button>
                         {project.v2Url && (
-                            <Button size="sm" className="flex items-center gap-2 bg-[#64B5F6] text-black hover:bg-[#81D4FA]" asChild>
+                            <Button 
+                                className="flex items-center gap-2 bg-[#64B5F6] text-black hover:bg-[#81D4FA]" 
+                                size="sm" 
+                                asChild
+                            >
                                 <a href={project.v2Url} target="_blank" rel="noopener noreferrer">
                                     <ExternalLink className="h-4 w-4" />
                                     <span>V2/Refactor Live Demo</span>
+                                </a>
+                            </Button>
+                        )}
+                        {project.misc && (
+                            <Button 
+                                className="flex items-center gap-2 bg-[#64B5F6] text-black hover:bg-[#81D4FA]" 
+                                size="sm" 
+                                asChild
+                            >
+                                <a href={project.misc.link} target="_blank" rel="noopener noreferrer">
+                                    <MiscIcon className="h-4 w-4" />
+                                    <span>{project.misc.name}</span>
                                 </a>
                             </Button>
                         )}
