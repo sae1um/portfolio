@@ -14,7 +14,7 @@ export default function Home() {
         <Hero />
         <MyModel />
       </section>
-      <section id='about' className='pt-32'>
+      <section id='about' className='pt-32 max-w-full'>
         <About />
       </section>
       <section id='projects' className='pt-16 max-w-full'>
