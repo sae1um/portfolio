@@ -1,7 +1,6 @@
-import React from "react"
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { ExternalLink, Github, Stars } from "lucide-react"
+import { ExternalLink, Github } from "lucide-react"
 
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
