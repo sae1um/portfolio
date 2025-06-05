@@ -2,6 +2,7 @@ import floraFlowImg from "../assets/projectImages/floraflowImg.png"
 import ttkit from "../assets/projectImages/ttkit.png"
 import portfolioImg from "../assets/projectImages/portfolioImg.png"
 import { Linkedin } from 'lucide-react';
+import { TbPassword } from "react-icons/tb";
 
 export const projects = [
     {
@@ -25,6 +26,10 @@ export const projects = [
         github: {disabled: false, url: "https://github.com/sae1um/TeacherToolkit-CS-Project"},
         live: {disabled: false, url: "https://ttkit.netlify.app"},
         imageUrl: ttkit,
+        popup: {
+            email: "test@teacher.com",
+            password: "TeacherTest!123"
+        }
     },
     {
         id: 3,
