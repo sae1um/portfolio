@@ -11,6 +11,7 @@ import Home from './pages/Home.jsx';
 import Contact from './pages/Contact.jsx';
 import ErrorElement from './pages/ErrorElement.jsx';
 import Test from './components/Test.jsx';
+import ProjectsPage from './pages/ProjectsPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         Component: Contact
+      },
+      {
+        path: "/projects",
+        Component: ProjectsPage
       },
       {
         path: "/test",
