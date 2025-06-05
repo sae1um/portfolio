@@ -153,7 +153,7 @@ export default function Technologies() {
                     >
                         {technologies.map((tech, index) => (
                             <motion.div
-                                key={tech.name}
+                                key={tech.id}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{
