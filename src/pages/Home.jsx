@@ -19,7 +19,6 @@ export default function Home() {
       </section>
       <section id='projects' className='pt-16 max-w-full'>
         <Projects />
-        
       </section>
     </div>
   )
