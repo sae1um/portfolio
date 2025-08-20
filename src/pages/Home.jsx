@@ -5,7 +5,8 @@ import MyModel from '../components/model'
 import Hero from '../components/Hero'
 import About from '../components/sections/About'
 import Projects from '../components/sections/Projects'
-import AboutTest from "../components/Test"
+// import AboutTest from "../components/Test"
+import EducationSection from "../components/sections/Education"
 
 export default function Home() {
   return (
@@ -16,6 +17,9 @@ export default function Home() {
       </section>
       <section id='about' className='pt-32 max-w-full'>
         <About />
+      </section>
+      <section id="education" >
+        <EducationSection />
       </section>
       <section id='projects' className='pt-16 max-w-full'>
         <Projects />

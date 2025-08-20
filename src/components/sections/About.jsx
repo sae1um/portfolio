@@ -52,14 +52,14 @@ export default function About() {
                                 <div className="flex flex-row items-center gap-3">
                                     <GraduationCap className="h-4 w-4 text-[#64B5F6] sm:h-5 sm:w-5" />
                                     <span className="text-sm text-gray-200 sm:text-base">
-                                        Studying Computer Science, Maths and IT @{" "}
+                                        BSc DTSP {"(Software Engineering)"} Apprenticeship @{" "}
                                         <a
-                                            href="https://www.utcsheffield.org.uk/olp/"
+                                            href="https://www.ada.ac.uk/apprentices/how-the-programme-works/degree-apprenticeship-digital-and-technology-solutions/"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="underline font-semibold"
                                         >
-                                            UTC Sheffield OLP
+                                            Ada National College for Digital Skills
                                         </a>
                                     </span>
                                 </div>
