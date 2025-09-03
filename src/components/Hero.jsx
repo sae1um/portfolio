@@ -1,7 +1,7 @@
 import React from 'react'
 import { Sparkles } from "lucide-react"
 import { motion } from "framer-motion"
-
+import DownloadCVButton from "../components/DownloadCVButton"
 export default function Hero() {
     return (
         <div
@@ -15,11 +15,11 @@ export default function Hero() {
                     className="mb-6"
                 >
                     <div className="relative inline-block">
-                        <span className="text-xl font-light tracking-widest text-gray-400">
+                        <h1 className="text-xl font-light tracking-widest text-gray-400">
                             <span className="mr-2 text-[#64B5F6]">&lt;</span>
                             Hello World
                             <span className="ml-2 text-[#64B5F6]">/&gt;</span>
-                        </span>
+                        </h1>
                     </div>
                 </motion.div>
 
@@ -70,8 +70,10 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="flex justify-center pb-2"
+                    className="flex justify-center items-center flex-col pb-2 gap-4"
                 >
+                        <DownloadCVButton/>
+
                     <motion.a
                         href="#about"
                         onClick={(e) => {

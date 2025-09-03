@@ -9,10 +9,11 @@ import { projects } from "../../lib/projectsList";
 import placeholder from "../../assets/projectImages/placeholder.jpg";
 import { Link } from "react-router-dom";
 import "../../App.css";
+
 export default function Projects() {
     return (
-        <div className="relative min-h-screen py-20">
-            <div className="container relative z-10 ">
+        <div className="relative min-h-screen py-16">
+            <div className="container relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
