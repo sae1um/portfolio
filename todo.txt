@@ -1,7 +1,3 @@
-Update mobile menu +portfolio @menu
-Create a contact form +portfolio @menu
-Design form layout +portfolio @menu
-Implement form validation +portfolio @menu
-Set up form submission +portfolio @menu
-Test form functionality +portfolio @menu
-List skills (technologies I learnt) +portfolio @contact
+- Update mobile menu
+- Implement form functionality 
+- Lazy loading images

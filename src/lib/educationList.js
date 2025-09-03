@@ -1,6 +1,6 @@
 import FPALogo from "../assets/logos/Firth-Park-Academy-Logo.png";
 import UTCLogo from "../assets/logos/UTC-Sheffield-Olympic-Legacy-Park-544x300-removebg-preview.png";
-import ADALogo from "../assets/logos/Ada-logo.webp"
+import ADALogo from "../assets/logos/Ada-Logo.webp"
 
 export const schoolList = [
     {
