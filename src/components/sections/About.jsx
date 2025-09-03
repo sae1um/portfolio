@@ -42,6 +42,7 @@ export default function About() {
                                             src={pfpimg}
                                             alt="Profile"
                                             className="h-full w-full object-cover"
+                                            loading="lazy"
                                         />
                                     </div>
                                 </div>

@@ -1,7 +1,7 @@
-import React from 'react'
 import { Sparkles } from "lucide-react"
 import { motion } from "framer-motion"
 import DownloadCVButton from "../components/DownloadCVButton"
+
 export default function Hero() {
     return (
         <div
@@ -30,7 +30,7 @@ export default function Hero() {
                     className="relative mb-4 text-center text-6xl font-bold tracking-tight text-white md:text-7xl lg:text-8xl"
                 >
                     <span className="relative inline-block">
-                        <span className="relative z-10">I'm</span>
+                        <span className="">I'm</span>
                         <motion.span
                             className="absolute -bottom-2 left-0 h-3  bg-[#64B5F6]/30 md:-bottom-3 md:h-4"
                             initial={{ width: 0 }}
