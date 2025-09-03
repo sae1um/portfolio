@@ -18,7 +18,7 @@ export default function Home() {
       <section id='about' className='pt-32 max-w-full'>
         <About />
       </section>
-      <section id="education" className="pt-16 min-w-full">
+      <section id="education" className="pt-16 px-4 max-w-full">
         <EducationSection />
       </section>
       <section id='projects' className='pt-16 max-w-full'>

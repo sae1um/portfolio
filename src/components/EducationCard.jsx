@@ -6,12 +6,22 @@ import { Trophy, Book, GraduationCap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export default function EducationCard({ school }) {
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+            },
+        },
+    };
     return (
         <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="w-full px-8 mb-12"
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
+            className="mb-16 space-y-8"
         >
             <Card className="relative overflow-hidden border-gray-800 bg-black/50 backdrop-blur-sm transition-all duration-300 hover:border-[#64B5F6] hover:bg-black/60 ">
                 <div className={`h-1 bg-gradient-to-r ${school.colour}`} />
@@ -139,12 +149,14 @@ export default function EducationCard({ school }) {
 
 function ProjectCard({ project }) {
     // console.log(project)
-    if(Object.keys(project).length === 0){
-        return(
+    if (Object.keys(project).length === 0) {
+        return (
             <div className="rounded-[4px]  border border-gray-800 bg-black/30 p-4">
-                <h5 className="mb-2 font-semibold text-white">Coming Soon...</h5>
+                <h5 className="mb-2 font-semibold text-white">
+                    Coming Soon...
+                </h5>
             </div>
-        )
+        );
     }
     return (
         <div className="rounded-[4px] border border-gray-800 bg-black/30 p-4">
