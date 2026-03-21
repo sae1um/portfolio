@@ -6,9 +6,9 @@ import CustomCursor from "./components/CustomCursor"
 function App({children}) {
   return (
     <div className="min-h-screen min-w-screen bg-black text-white overflow-hidden relative z-0 flex flex-col">
-      <SpaceBackground />
+      {/* <SpaceBackground /> */}
       <Navbar />
-      <CustomCursor />
+      {/* <CustomCursor /> */}
       <div className="relative z-10 w-full overflow-hidden">
         <Outlet scrollToId/>
       </div>
