@@ -9,7 +9,7 @@ export const currentWork = [
     {
         name: "DIY Macropad",
         description:
-            "Designing and building a custom mechanical macropad using Arduino Pro Micro and QMK firmware.",
+            "Building a custom UI with Tauri, to easily configure the macropad.",
         emoji: "⌨️"
     },
     {
@@ -23,12 +23,6 @@ export const currentWork = [
         description:
             "Sharpening problem-solving and algorithmic thinking through daily coding challenges.",
         emoji: "🧑‍💻"
-    },
-    {
-        name: "A-Level Revision",
-        description:
-            "Preparing for upcoming A-Level exams with a focus on Computer Science and Maths.",
-        emoji: "📖"
     },
     {
         name: "Personal Blog",

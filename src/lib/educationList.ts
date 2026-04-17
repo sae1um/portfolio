@@ -64,7 +64,7 @@ export const schoolList: School[] = [
                 link: "https://www.linkedin.com/posts/godswill-godwin-erhunmwunse-10b3a825a_sometimes-the-scariest-emails-turn-out-to-activity-7354805107667914752-LivG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD_GJJsB1uttLkrvvHHBhelrnj3-QpVjsFI",
             },
             {
-                text: "Took part in Young advisors NHS pogramme",
+                text: "Took part in Young advisors NHS programme",
                 link: "https://www.sheffieldchildrens.nhs.uk/news/national-centre-for-child-health-technology-developing-at-pace-to-transform-healthcare-delivery-for-children-and-young-people/",
             },
             { text: "Completed A-level studies with high grades" },
@@ -121,7 +121,7 @@ export const schoolList: School[] = [
         description:
             "Starting a Level 6 Digital Technology Solutions Degree Apprenticeship at Ada, combining academic learning with real-world industry experience in software engineering and digital innovation.",
         achievements: [{ text: "Coming Soon..." }],
-        coursework: ["Comming Soon..."],
+        coursework: ["Coming Soon..."],
         projects:[{}],
         logo: ADALogo,
         website: "https://www.ada.ac.uk/",
