@@ -41,7 +41,7 @@ export default function Navbar() {
     <nav
       className="Text fixed w-full backdrop-blur-lg shadow-lg z-50">
       <div className="px-4 sm:px-10 lg:px-20">
-        <div className="flex justify-between items-center py-5">
+        <div className="flex items-center justify-between py-5">
           <Link
             to={"/"}
             onClick={(e) => {
